@@ -9,7 +9,7 @@ You've got to sort that stack.
 
 ### The sorting algorithm:
 
-1) Check that the stack is valid
+#### 1) Check that the stack is valid
 	- Does not contain duplicates
 	- Contains only integers
 
@@ -18,7 +18,7 @@ You've got to sort that stack.
 0 4 29 3 two 6  => contains other things than integers
 0 4 29 3 2 6 9  => valid
 
-2) Assign each number its ordered position in the stack
+#### 2) Assign each number its ordered position in the stack
 
 for 0 4 29 3 2 6 9
 
@@ -34,17 +34,17 @@ for 0 4 29 3 2 6 9
 
 stack becomes 0 3 6 2 1 4 5
 
-3) take the smallest numbers and put them in the temp stack,
+#### 3) take the smallest numbers and put them in the temp stack,
 leave the highest half in the main stack
 
 ![sorting visu](./utils/imgs/sorting_visu_1.png)
 
-4) Bring back the smallest half to the *bottom* of the main stack, in the
+#### 4) Bring back the smallest half to the *bottom* of the main stack, in the
 correct order
 
 ![sorting visu](./utils/imgs/sorting_visu_2.png)
 
-5) Repeat operations 3 & 4 until the biggest number is pushed to the bottom of
+#### 5) Repeat operations 3 & 4 until the biggest number is pushed to the bottom of
 the main stack
 
 **Special rule:** At *any* point in the loop, if the smallest unsorted number is
