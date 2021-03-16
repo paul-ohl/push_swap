@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 11:14:18 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/09 15:53:27 by pohl             ###   ########.fr       */
+/*   Updated: 2021/03/16 19:54:40 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,32 @@
 
 static void	swap(t_stack *stack)
 {
-	int		tmp;
+	int	tmp;
 
-	if (stack->len > 1)
-	{
-		tmp = stack->content[0];
-		stack->content[0] = stack->content[1];
-		stack->content[1] = tmp;
-	}
+	if (stack->len <= 1)
+		return ;
+	tmp = stack->top->next->number;
+	stack->top->next->number = stack->top->number;
+	stack->top->number = tmp;
 }
 
-void	sa(t_stack *a, t_stack *b)
+bool	sa(t_stack *a, t_stack *b)
 {
 	swap(a);
 	b->len = b->len;
+	return (true);
 }
 
-void	sb(t_stack *a, t_stack *b)
+bool	sb(t_stack *a, t_stack *b)
 {
 	swap(b);
 	a->len = a->len;
+	return (true);
 }
 
-void	ss(t_stack *a, t_stack *b)
+bool	ss(t_stack *a, t_stack *b)
 {
 	swap(a);
 	swap(b);
+	return (true);
 }

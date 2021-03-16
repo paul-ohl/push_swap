@@ -1,0 +1,3 @@
+[submodule "checker/libft"]
+	path = checker/libft
+	url = ssh://git@git.42l.fr:42084/pohl/libft.git

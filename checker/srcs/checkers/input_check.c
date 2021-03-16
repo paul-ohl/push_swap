@@ -6,22 +6,12 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 13:22:01 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/09 13:31:17 by pohl             ###   ########.fr       */
+/*   Updated: 2021/03/16 16:43:02 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include "checker.h"
-
-static bool	is_a_number(char *str)
-{
-	while (*str)
-	{
-		if (*str < '0' || *str > '9')
-			return (false);
-		str++;
-	}
-	return (true);
-}
 
 bool	is_input_valid(int argc, char **argv)
 {
@@ -30,7 +20,7 @@ bool	is_input_valid(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
-		if (!is_a_number(argv[i]))
+		if (!ft_isnumber(argv[i]))
 			return (false);
 		i++;
 	}

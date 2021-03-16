@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 13:32:32 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/09 15:49:42 by pohl             ###   ########.fr       */
+/*   Updated: 2021/03/16 19:57:01 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,43 @@
 
 # include <stdbool.h>
 # include <stddef.h>
+# include "double_linked_list.h"
+
+# define T_LIST_MEM_SIZE 8
 
 typedef struct s_stack
 {
-	size_t	len;
-	int		*content;
-}			t_stack;
+	size_t		len;
+	t_list		*top;
+}				t_stack;
 
 /* Checkers */
 bool	is_input_valid(int argc, char **argv);
 
-/* Helpers */
+/* Utils */
 bool	init_stacks(t_stack *a, t_stack *b, int argc, char **argv);
 void	print_stacks(t_stack *a, t_stack *b);
+int		ft_atoi(const char *str);
 
 /* Operations */
-void	sa(t_stack *a, t_stack *b);
-void	sb(t_stack *a, t_stack *b);
-void	ss(t_stack *a, t_stack *b);
-void	pa(t_stack *a, t_stack *b);
-void	pb(t_stack *a, t_stack *b);
-void	ra(t_stack *a, t_stack *b);
-void	rb(t_stack *a, t_stack *b);
-void	rr(t_stack *a, t_stack *b);
-void	rra(t_stack *a, t_stack *b);
-void	rrb(t_stack *a, t_stack *b);
-void	rrr(t_stack *a, t_stack *b);
+bool	sa(t_stack *a, t_stack *b);
+bool	sb(t_stack *a, t_stack *b);
+bool	ss(t_stack *a, t_stack *b);
+bool	pa(t_stack *a, t_stack *b);
+bool	pb(t_stack *a, t_stack *b);
+bool	ra(t_stack *a, t_stack *b);
+bool	rb(t_stack *a, t_stack *b);
+bool	rr(t_stack *a, t_stack *b);
+bool	rra(t_stack *a, t_stack *b);
+bool	rrb(t_stack *a, t_stack *b);
+bool	rrr(t_stack *a, t_stack *b);
 
 /* Errors */
 int		print_err(const char *err);
+
+/* Execution */
+bool	execute_input(t_stack *a, t_stack *b);
+bool	execute_instruction(char *instruction, t_stack *a, t_stack *b);
+
 
 #endif

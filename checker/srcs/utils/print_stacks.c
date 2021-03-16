@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 15:14:02 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/09 15:51:01 by pohl             ###   ########.fr       */
+/*   Updated: 2021/03/16 16:55:31 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,32 @@
 void	print_stacks(t_stack *a, t_stack *b)
 {
 	size_t	i;
-	size_t	biggest_stack;
+	size_t	j;
 
-	/* printf("a->len: %zu\n", a->len); */
-	if (a->len > b->len)
-		biggest_stack = a->len;
-	else
-		biggest_stack = b->len;
+	if (!a || !b)
+		return ;
 	i = 0;
-	while (i < biggest_stack)
+	j = 0;
+	while (i < a->len || j < b->len)
 	{
-		if (i < a->len && i < b->len)
-			printf("%3d |%3d\n", a->content[i], b->content[i]);
+		if (i < a->len && j < b->len)
+		{
+			printf("%3d |%3d\n", a->top->number, b->top->number);
+			a->top = a->top->next;
+			b->top = b->top->next;
+		}
 		else if (i < a->len)
-			printf("%3d |\n", a->content[i]);
+		{
+			printf("%3d |\n", a->top->number);
+			a->top = a->top->next;
+		}
 		else
-			printf("    |%3d\n", a->content[i]);
+		{
+			printf("    |%3d\n", a->top->number);
+			b->top = b->top->next;
+		}
 		i++;
+		j++;
 	}
-	printf("  a |  b\n\n");
+	printf("  a |  b\n");
 }

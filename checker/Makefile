@@ -8,7 +8,9 @@ EXTLIB		= libft
 SRCS		= main.c \
 			  checkers/input_check.c \
 			  errors/errors.c \
-			  helpers/initialise.c helpers/print_stacks.c \
+			  execution/execute_input.c execution/execute_instruction.c \
+			  utils/init_stacks.c utils/print_stacks.c utils/ft_atoi.c \
+			  utils/double_linked_list.c \
 			  operations/push.c operations/reverse_rotate.c operations/swap.c \
 			  operations/rotate.c
 
@@ -32,11 +34,11 @@ $(NAME): $(OBJS) $(EXTLIB)/$(EXTLIB).a
 $(OBJS): $(OBJSDIR)/%.o: $(SRCSDIR)/%.c
 	@mkdir -p $(@D)
 	@echo Compiling $<
-	@$(CC) $(CFLAGS) -I$(INCLUDES) -I$(EXTLIB) -c $< -o $@
+	@$(CC) $(CFLAGS) -I$(INCLUDES) -I$(EXTLIB)/incs -c $< -o $@
 
 $(EXTLIB)/$(EXTLIB).a:
 	@echo "Compiling $@"
-	@$(MAKE) -s -C $(EXTLIB)
+	@$(MAKE) -s -C $(EXTLIB) > /dev/null
 
 clean:
 	rm -rf $(OBJSDIR)
