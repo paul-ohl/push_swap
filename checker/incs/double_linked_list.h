@@ -6,7 +6,7 @@
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 19:20:13 by paulohl           #+#    #+#             */
-/*   Updated: 2021/03/16 16:23:21 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/17 13:27:58 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ void	*new_node(int number);
 void	insert_before(t_list *list, t_list *node);
 void	insert_after(t_list *list, t_list *node);
 void	free_node(t_list *node);
-void	free_whole_list(t_list *list);
+void	free_whole_list(t_list *list, size_t len);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 18:28:45 by paulohl           #+#    #+#             */
-/*   Updated: 2021/03/16 18:20:36 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/17 13:27:18 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,10 @@ void	free_node(t_list *node)
 	free(node);
 }
 
-void	free_whole_list(t_list *list)
+void	free_whole_list(t_list *list, size_t len)
 {
 	if (!list)
 		return ;
-	while (list->next)
+	while (len--)
 		free_node(list->next);
-	while (list->prev)
-		free_node(list->prev);
-	free_node(list);
 }

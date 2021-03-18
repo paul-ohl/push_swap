@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   execute_input.c                                    :+:      :+:    :+:   */
+/*   sort_check.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/16 18:57:52 by paulohl           #+#    #+#             */
-/*   Updated: 2021/03/16 20:04:49 by paulohl          ###   ########.fr       */
+/*   Created: 2021/03/17 20:29:19 by paulohl           #+#    #+#             */
+/*   Updated: 2021/03/18 16:11:27 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
 #include "checker.h"
+#include "libft.h"
 
 #include <stdio.h>
 
-bool	execute_input(t_stack *a, t_stack *b)
+bool	is_stack_sorted(t_stack *a, t_stack *b)
 {
-	char	*instruction;
-	int		err;
+	size_t	i;
 
-	err = get_next_line(0, &instruction);
-	printf("err: %d\n", err);
-	while (err)
+	if (b->len > 0)
+		return (false);
+	i = 0;
+	while (++i < a->len)
 	{
-		if (err == -1 || execute_instruction(instruction, a, b))
-		{
-			free(instruction);
+		if (a->top->number > a->top->next->number)
 			return (false);
-		}
-		free(instruction);
-		err = get_next_line(0, &instruction);
+		a->top = a->top->next;
 	}
-	if (instruction)
-		free(instruction);
 	return (true);
 }

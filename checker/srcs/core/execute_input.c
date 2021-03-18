@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   execute_instruction.c                              :+:      :+:    :+:   */
+/*   execute_input.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/16 19:43:31 by paulohl           #+#    #+#             */
-/*   Updated: 2021/03/16 20:02:00 by paulohl          ###   ########.fr       */
+/*   Created: 2021/03/16 18:57:52 by paulohl           #+#    #+#             */
+/*   Updated: 2021/03/17 20:20:47 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 #include "checker.h"
 
-bool	execute_instruction(char *instruction, t_stack *a, t_stack *b)
+#include <stdio.h>
+
+static bool	execute_instruction(char *instruction, t_stack *a, t_stack *b)
 {
 	if (!ft_strcmp(instruction, "sa"))
 		return (sa(a, b));
@@ -38,4 +41,26 @@ bool	execute_instruction(char *instruction, t_stack *a, t_stack *b)
 	if (!ft_strcmp(instruction, "rrr"))
 		return (rrr(a, b));
 	return (false);
+}
+
+bool	execute_input(t_stack *a, t_stack *b)
+{
+	char	*instruction;
+	int		err;
+
+	err = get_next_line(0, &instruction);
+	while (err)
+	{
+		if (err == -1 || !execute_instruction(instruction, a, b))
+		{
+			free(instruction);
+			free_whole_list(a->top, a->len);
+			free_whole_list(b->top, b->len);
+			return (false);
+		}
+		print_stacks(a, b);
+		free(instruction);
+		err = get_next_line(0, &instruction);
+	}
+	return (true);
 }

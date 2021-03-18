@@ -6,10 +6,9 @@ INCLUDES	= incs
 EXTLIB		= libft
 
 SRCS		= main.c \
-			  checkers/input_check.c \
 			  errors/errors.c \
-			  execution/execute_input.c execution/execute_instruction.c \
-			  utils/init_stacks.c utils/print_stacks.c utils/ft_atoi.c \
+			  core/execute_input.c core/sort_check.c \
+			  utils/init_stacks.c utils/print_stacks.c \
 			  utils/double_linked_list.c \
 			  operations/push.c operations/reverse_rotate.c operations/swap.c \
 			  operations/rotate.c

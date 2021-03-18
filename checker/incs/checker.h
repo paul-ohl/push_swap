@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 13:32:32 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/16 19:57:01 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/17 20:34:53 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,10 @@ bool	rrb(t_stack *a, t_stack *b);
 bool	rrr(t_stack *a, t_stack *b);
 
 /* Errors */
-int		print_err(const char *err);
+int		print_err(void);
 
-/* Execution */
+/* Core */
 bool	execute_input(t_stack *a, t_stack *b);
-bool	execute_instruction(char *instruction, t_stack *a, t_stack *b);
-
+bool	is_stack_sorted(t_stack *a, t_stack *b);
 
 #endif
