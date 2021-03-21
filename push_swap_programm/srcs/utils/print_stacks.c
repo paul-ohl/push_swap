@@ -6,11 +6,11 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 15:14:02 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/16 16:55:31 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/21 14:29:03 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "push_swap.h"
 #include <stdio.h>
 
 void	print_stacks(t_stack *a, t_stack *b)

@@ -6,11 +6,11 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 11:52:24 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/16 19:55:53 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/21 14:28:40 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "push_swap.h"
 
 static void rotate(t_stack *stack)
 {

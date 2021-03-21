@@ -1,39 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/09 12:04:42 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/21 14:28:21 by paulohl          ###   ########.fr       */
+/*   Created: 2021/03/09 14:18:36 by pohl              #+#    #+#             */
+/*   Updated: 2021/03/21 14:42:49 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <unistd.h>
 
-static void reverse_rotate(t_stack *stack)
+int	print_err(void)
 {
-	stack->top = stack->top->prev;
-}
-
-bool	rra(t_stack *a, t_stack *b)
-{
-	reverse_rotate(a);
-	b->len = b->len;
-	return (true);
-}
-
-bool	rrb(t_stack *a, t_stack *b)
-{
-	reverse_rotate(b);
-	a->len = a->len;
-	return (true);
-}
-
-bool	rrr(t_stack *a, t_stack *b)
-{
-	reverse_rotate(a);
-	reverse_rotate(b);
-	return (true);
+	write (2, "Error\n", 6);
+	return (1);
 }

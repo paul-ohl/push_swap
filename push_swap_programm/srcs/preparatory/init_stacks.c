@@ -6,13 +6,13 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 13:08:45 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/17 20:18:33 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/21 14:28:58 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-#include "checker.h"
+#include "push_swap.h"
 #include "double_linked_list.h"
 
 #include <stdio.h>
@@ -76,5 +76,6 @@ bool	init_stacks(t_stack *a, t_stack *b, int argc, char **argv)
 	a->len++;
 	if (!check_doubles(a->top, a->len))
 		return (clear_list(a));
+	replace_with_index(a->top, a->len);
 	return (true);
 }

@@ -6,14 +6,15 @@ INCLUDES	= incs
 EXTLIB		= libft
 
 SRCS		= main.c \
-			  utils/init_stacks.c utils/print_stacks.c \
-			  utils/double_linked_list.c \
+			  preparatory/init_stacks.c preparatory/replace_with_index.c \
+			  utils/print_stacks.c utils/double_linked_list.c \
+			  utils/errors.c \
 			  operations/push.c operations/reverse_rotate.c operations/swap.c \
 			  operations/rotate.c
 
 # Compiler options
 CC			= gcc
-CFLAGS		= -Wall -Wextra -g3 #-fsanitize=address
+CFLAGS		= -Wall -Wextra -g3 -fsanitize=address
 
 ###################################################
 # The rest is done by the MakeFile automatically, #
