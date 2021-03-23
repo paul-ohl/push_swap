@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/09 12:07:55 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/23 18:16:27 by paulohl          ###   ########.fr       */
+/*   Created: 2021/03/23 18:01:35 by paulohl           #+#    #+#             */
+/*   Updated: 2021/03/23 18:39:25 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <unistd.h>
 
-int	main(int argc, char **argv)
+void	sort_stacks(t_stack *a, t_stack *b, int pivot)
 {
-	t_stack	a;
-	t_stack	b;
+	size_t	i;
 
-	if (argc == 1)
-		return (0);
-	if (!init_stacks(&a, &b, argc, argv))
-		return (print_err());
-	print_stacks(&a, &b);
-	sort_stacks(&a, &b, a.len / 2);
-	free_whole_list(a.top, a.len);
-	return (0);
+	i = 0;
+	while (i < a->len)
+	{
+		if (a->top->number < pivot)
+			pb(a, b);
+		else
+		{
+			ra(a, b);
+			i++;
+		}
+		print_stacks(a, b);
+	}
 }

@@ -6,6 +6,7 @@ INCLUDES	= incs
 EXTLIB		= libft
 
 SRCS		= main.c \
+			  core/sort.c \
 			  preparatory/init_stacks.c preparatory/replace_with_index.c \
 			  utils/print_stacks.c utils/double_linked_list.c \
 			  utils/errors.c \
