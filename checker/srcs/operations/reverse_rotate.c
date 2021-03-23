@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 12:04:42 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/16 19:55:34 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/23 19:58:40 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 static void reverse_rotate(t_stack *stack)
 {
-	stack->top = stack->top->prev;
+	if (stack->top)
+		stack->top = stack->top->prev;
 }
 
 bool	rra(t_stack *a, t_stack *b)

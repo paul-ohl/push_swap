@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 15:14:02 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/16 16:55:31 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/23 19:56:39 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	print_stacks(t_stack *a, t_stack *b)
 		}
 		else
 		{
-			printf("    |%3d\n", a->top->number);
+			printf("    |%3d\n", b->top->number);
 			b->top = b->top->next;
 		}
 		i++;
