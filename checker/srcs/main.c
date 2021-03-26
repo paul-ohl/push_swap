@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 12:07:55 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/17 20:32:49 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/26 16:27:26 by pohl             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	main(int argc, char **argv)
 		return (0);
 	if (!init_stacks(&a, &b, argc, argv))
 		return (print_err());
-	print_stacks(&a, &b);
 	if (!execute_input(&a, &b))
 		return (print_err());
 	if (is_stack_sorted(&a, &b))

@@ -6,7 +6,7 @@
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 18:57:52 by paulohl           #+#    #+#             */
-/*   Updated: 2021/03/17 20:20:47 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/26 16:27:13 by pohl             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ bool	execute_input(t_stack *a, t_stack *b)
 			free_whole_list(b->top, b->len);
 			return (false);
 		}
-		print_stacks(a, b);
 		free(instruction);
 		err = get_next_line(0, &instruction);
 	}
