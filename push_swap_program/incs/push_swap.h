@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 13:32:32 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/23 18:17:36 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/26 15:49:49 by pohl             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_stack
 }				t_stack;
 
 /* Core */
-void	sort_stacks(t_stack *a, t_stack *b, int pivot);
+void	sort_stacks(t_stack *a, t_stack *b, int smallest);
 
 /* Preparatory */
 bool	init_stacks(t_stack *a, t_stack *b, int argc, char **argv);
