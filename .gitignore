@@ -3,3 +3,4 @@ a.out*
 objs/
 tags
 push_swap_program/push_swap
+checker/checker
