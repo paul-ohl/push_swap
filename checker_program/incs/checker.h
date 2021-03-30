@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 13:32:32 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/17 20:34:53 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/29 17:55:29 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 # include <stdbool.h>
 # include <stddef.h>
 # include "double_linked_list.h"
-
-# define T_LIST_MEM_SIZE 8
 
 typedef struct s_stack
 {

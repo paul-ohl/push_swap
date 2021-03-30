@@ -6,12 +6,13 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 12:07:55 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/26 16:07:25 by pohl             ###   ########.fr       */
+/*   Updated: 2021/03/30 16:16:27 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <unistd.h>
+#include <stdlib.h>
 
 int	main(int argc, char **argv)
 {
@@ -22,8 +23,7 @@ int	main(int argc, char **argv)
 		return (0);
 	if (!init_stacks(&a, &b, argc, argv))
 		return (print_err());
-	/* print_stacks(&a, &b); */
-	sort_stacks(&a, &b, 0);
+	sort_stacks(&a, &b);
 	free_whole_list(a.top, a.len);
 	return (0);
 }

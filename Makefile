@@ -6,6 +6,8 @@ CHECKER_DIR		= checker_program
 all:
 	@$(MAKE) -s -C $(CHECKER_DIR)
 	@$(MAKE) -s -C $(PUSH_SWAP_DIR)
+	cp $(CHECKER_DIR)/$(CHECKER) ./
+	cp $(PUSH_SWAP_DIR)/$(PUSH_SWAP) ./
 
 clean:
 	@$(MAKE) -s -C $(CHECKER_DIR) clean
@@ -14,6 +16,8 @@ clean:
 fclean: clean
 	@$(MAKE) -s -C $(CHECKER_DIR) fclean
 	@$(MAKE) -s -C $(PUSH_SWAP_DIR) fclean
+	rm ./$(CHECKER)
+	rm ./$(PUSH_SWAP)
 
 re: fclean all
 
