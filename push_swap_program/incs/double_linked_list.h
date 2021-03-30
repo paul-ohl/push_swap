@@ -6,14 +6,14 @@
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 19:20:13 by paulohl           #+#    #+#             */
-/*   Updated: 2021/03/17 13:27:58 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/30 18:17:41 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOUBLE_LINKED_LIST_H
 # define DOUBLE_LINKED_LIST_H
 
-typedef struct s_list t_list;
+typedef struct s_list	t_list;
 struct s_list
 {
 	t_list	*prev;

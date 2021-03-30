@@ -6,7 +6,7 @@
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 18:01:35 by paulohl           #+#    #+#             */
-/*   Updated: 2021/03/30 16:02:53 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/30 16:51:20 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static int	split_stack_a(t_stack *a, t_stack *b, int smallest)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (b->len < (a->len + b->len - smallest) / 2 && smallest < (int)(a->len + b->len))

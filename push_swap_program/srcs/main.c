@@ -6,13 +6,12 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 12:07:55 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/30 16:16:27 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/30 16:51:00 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <unistd.h>
-#include <stdlib.h>
 
 int	main(int argc, char **argv)
 {

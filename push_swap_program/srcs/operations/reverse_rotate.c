@@ -6,14 +6,14 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 12:04:42 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/23 18:24:18 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/03/30 18:27:39 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "push_swap.h"
 
-static void reverse_rotate(t_stack *stack)
+static void	reverse_rotate(t_stack *stack)
 {
 	stack->top = stack->top->prev;
 }
