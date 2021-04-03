@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 13:08:45 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/17 20:18:33 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/03 13:57:29 by pohl             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,20 @@
 
 #include <stdio.h>
 
-static bool is_int(int number, char *str_number)
+static bool	is_int(int number, char *str_number)
 {
 	if (number == -1 && ft_strcmp("-1", str_number))
 		return (false);
 	return (true);
 }
 
-static bool clear_list(t_stack *stack)
+static bool	clear_list(t_stack *stack)
 {
 	free_whole_list(stack->top, stack->len);
 	return (false);
 }
 
-static bool check_doubles(t_list *list, size_t len)
+static bool	check_doubles(t_list *list, size_t len)
 {
 	t_list	*checker;
 	size_t	i;

@@ -6,13 +6,13 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 11:52:24 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/23 19:57:52 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/03 13:57:02 by pohl             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-static void rotate(t_stack *stack)
+static void	rotate(t_stack *stack)
 {
 	if (stack->top)
 		stack->top = stack->top->next;
