@@ -8,8 +8,7 @@ EXTLIB		= libft
 SRCS		= main.c \
 			  errors/errors.c \
 			  core/execute_input.c core/sort_check.c \
-			  utils/init_stacks.c utils/print_stacks.c \
-			  utils/double_linked_list.c \
+			  utils/init_stacks.c utils/double_linked_list.c \
 			  operations/push.c operations/reverse_rotate.c operations/swap.c \
 			  operations/rotate.c
 

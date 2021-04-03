@@ -8,8 +8,7 @@ EXTLIB		= libft
 SRCS		= main.c \
 			  sorting/main_sort.c sorting/small_sort.c sorting/sort_utils.c \
 			  preparatory/init_stacks.c preparatory/replace_with_index.c \
-			  utils/print_stacks.c utils/double_linked_list.c \
-			  utils/errors.c \
+			  utils/double_linked_list.c utils/errors.c \
 			  operations/push.c operations/reverse_rotate.c operations/swap.c \
 			  operations/rotate.c
 
