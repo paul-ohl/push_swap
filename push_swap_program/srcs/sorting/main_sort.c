@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   main_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 18:01:35 by paulohl           #+#    #+#             */
-/*   Updated: 2021/03/30 16:51:20 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/03 12:57:04 by pohl             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ static int	split_stack_a(t_stack *a, t_stack *b, int smallest)
 	int	i;
 
 	i = 0;
-	while (b->len < (a->len + b->len - smallest) / 2 && smallest < (int)(a->len + b->len))
+	while (b->len < (a->len + b->len - smallest) / 2
+		&& smallest < (int)(a->len + b->len))
 	{
 		if (a->top->number < (int)(a->len + b->len + smallest) / 2)
 			pb(a, b);
@@ -29,33 +30,6 @@ static int	split_stack_a(t_stack *a, t_stack *b, int smallest)
 		}
 	}
 	return (i);
-}
-
-int	skip_smallest(t_stack *a, t_stack *b, int smallest)
-{
-	while (a->top->number == smallest)
-	{
-		ra(a, b);
-		smallest++;
-	}
-	return (smallest);
-}
-
-bool	is_closer_down(t_stack *b, int smallest)
-{
-	t_list	*down;
-	t_list	*up;
-
-	if (b->top->number == smallest)
-		return (true);
-	down = b->top->next;
-	up = b->top->prev;
-	while (down->number != smallest && up->number != smallest)
-	{
-		down = down->next;
-		up = up->prev;
-	}
-	return (down->number == smallest);
 }
 
 int	sort_remains(t_stack *a, t_stack *b, int smallest)
@@ -121,6 +95,11 @@ void	sort_stacks(t_stack *a, t_stack *b)
 	int		i;
 	int		smallest;
 
+	if (a->len <= 20)
+	{
+		sort_small_stack(a, b);
+		return ;
+	}
 	smallest = 0;
 	split_stack_a(a, b, smallest);
 	smallest = order_stack_b(a, b, smallest);
