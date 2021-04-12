@@ -6,7 +6,7 @@
 /*   By: paulohl <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 10:15:42 by paulohl           #+#    #+#             */
-/*   Updated: 2021/03/31 12:30:03 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/12 11:42:15 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*initialize(t_opt *options)
 	return ("");
 }
 
-int	get_arg(t_opt *opt, int argc, char *argv[], char **nextchar)
+int		get_arg(t_opt *opt, int argc, char *argv[], char **nextchar)
 {
 	opt->optarg = 0;
 	if (++(opt->optind) >= argc)
@@ -41,7 +41,7 @@ int	get_arg(t_opt *opt, int argc, char *argv[], char **nextchar)
 	return (0);
 }
 
-int	error(char *prog_name, char c, t_opt *opt, int mode)
+int		error(char *prog_name, char c, t_opt *opt, int mode)
 {
 	int		n;
 
@@ -62,7 +62,7 @@ int	error(char *prog_name, char c, t_opt *opt, int mode)
 	return ('?');
 }
 
-int	read_string(int argc, char *argv[], t_opt *opt, char **nextchar)
+int		read_string(int argc, char *argv[], t_opt *opt, char **nextchar)
 {
 	int		i;
 
@@ -84,12 +84,12 @@ int	read_string(int argc, char *argv[], t_opt *opt, char **nextchar)
 	}
 }
 
-int	ft_getopt(t_opt *opt, int argc, char *argv[], char *optstring)
+int		ft_getopt(t_opt *opt, int argc, char *argv[], char *optstring)
 {
-	static char	*nextchar = (char *) - 1;
+	static char	*nextchar = (char *)-1;
 	int			i;
 
-	if (nextchar == (char *) - 1 || opt->optreset == 1)
+	if (nextchar == (char *)-1 || opt->optreset == 1)
 		nextchar = initialize(opt);
 	if ((*nextchar == 0) && get_arg(opt, argc, argv, &nextchar))
 		return (-1);

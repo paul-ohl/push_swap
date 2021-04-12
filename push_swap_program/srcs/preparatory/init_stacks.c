@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 13:08:45 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/30 18:27:25 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/12 11:55:21 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static bool	check_doubles(t_list *list, size_t len)
 	return (true);
 }
 
-bool	init_stacks(t_stack *a, t_stack *b, int argc, char **argv)
+bool		init_stacks(t_stack *a, t_stack *b, int argc, char **argv)
 {
 	a->len = 0;
 	a->top = new_node(ft_atoi(argv[--argc]));

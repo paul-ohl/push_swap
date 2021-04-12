@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 08:31:28 by pohl              #+#    #+#             */
-/*   Updated: 2021/04/03 12:57:42 by pohl             ###   ########.fr       */
+/*   Updated: 2021/04/12 11:56:51 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static void	sort_by_removal(t_stack *a, t_stack *b)
 	pa(a, b);
 }
 
-void	sort_small_stack(t_stack *a, t_stack *b)
+void		sort_small_stack(t_stack *a, t_stack *b)
 {
 	int		order;
 

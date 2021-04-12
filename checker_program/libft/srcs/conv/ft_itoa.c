@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 16:03:56 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/30 18:22:58 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/12 11:38:08 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	num_of_char(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int				i;
 	unsigned int	num;

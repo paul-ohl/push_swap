@@ -6,7 +6,7 @@
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 19:20:13 by paulohl           #+#    #+#             */
-/*   Updated: 2021/04/03 17:59:15 by pohl             ###   ########.fr       */
+/*   Updated: 2021/04/12 11:46:46 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define DOUBLE_LINKED_LIST_H
 
 typedef struct s_list	t_list;
-struct s_list
+struct	s_list
 {
 	t_list	*prev;
 	t_list	*next;

@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 12:52:52 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/31 12:28:43 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/12 11:39:10 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <unistd.h>
 #include "libft.h"
 
-char	*ft_strjoin_freefirst(char const *s1, char const *s2)
+char		*ft_strjoin_freefirst(char const *s1, char const *s2)
 {
 	char	*buffer;
 
@@ -51,7 +51,7 @@ static int	check_rest(char **rest, char **line)
 	return (0);
 }
 
-int	final_return(char **line, char **rest, char *temp)
+int			final_return(char **line, char **rest, char *temp)
 {
 	if (temp)
 		free(temp);
@@ -66,7 +66,7 @@ int	final_return(char **line, char **rest, char *temp)
 	return (-1);
 }
 
-int	read_input(char **line, char **rest, char *temp, int fd)
+int			read_input(char **line, char **rest, char *temp, int fd)
 {
 	int	n;
 
@@ -86,7 +86,7 @@ int	read_input(char **line, char **rest, char *temp, int fd)
 	return (-1);
 }
 
-int	get_next_line(int fd, char **line)
+int			get_next_line(int fd, char **line)
 {
 	static char	*rest = NULL;
 	char		*temp;

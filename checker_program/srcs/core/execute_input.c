@@ -6,7 +6,7 @@
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 18:57:52 by paulohl           #+#    #+#             */
-/*   Updated: 2021/03/30 18:46:52 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/12 11:31:43 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static bool	execute_instruction(char *instruction, t_stack *a, t_stack *b)
 	return (false);
 }
 
-bool	execute_input(t_stack *a, t_stack *b)
+bool		execute_input(t_stack *a, t_stack *b)
 {
 	char	*instruction;
 	int		err;

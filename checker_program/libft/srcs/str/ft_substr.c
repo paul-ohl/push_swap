@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:02:15 by pohl              #+#    #+#             */
-/*   Updated: 2021/04/03 16:12:53 by pohl             ###   ########.fr       */
+/*   Updated: 2021/04/12 11:41:27 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static char	*empty_string(void)
+static char		*empty_string(void)
 {
 	char	*result;
 
@@ -31,7 +31,7 @@ static size_t	select_smallest(size_t num1, size_t num2)
 	return (num1);
 }
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+char			*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*buffer;
 	size_t	result_len;

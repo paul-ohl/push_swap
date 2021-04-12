@@ -6,7 +6,7 @@
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 14:03:47 by paulohl           #+#    #+#             */
-/*   Updated: 2021/03/21 15:08:13 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/12 11:55:42 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	order_list(int *numbers, size_t len)
 	}
 }
 
-int	*fill_list(t_list *list, size_t len)
+int		*fill_list(t_list *list, size_t len)
 {
 	int		*numbers;
 	size_t	i;
@@ -55,7 +55,7 @@ int	*fill_list(t_list *list, size_t len)
 	return (numbers);
 }
 
-int	get_index(int *numbers, int reference)
+int		get_index(int *numbers, int reference)
 {
 	size_t	i;
 

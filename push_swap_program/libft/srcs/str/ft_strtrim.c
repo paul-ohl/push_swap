@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:51:37 by pohl              #+#    #+#             */
-/*   Updated: 2021/04/03 16:21:38 by pohl             ###   ########.fr       */
+/*   Updated: 2021/04/12 11:41:08 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static bool	is_in_set(char c, char const *set)
 	return (false);
 }
 
-int	result_len(const char *str, const char *set)
+int			result_len(const char *str, const char *set)
 {
 	int	i;
 	int	char_count;
@@ -43,7 +43,7 @@ int	result_len(const char *str, const char *set)
 	return (i - char_count);
 }
 
-char	*ft_strtrim(const char *str, const char *set)
+char		*ft_strtrim(const char *str, const char *set)
 {
 	char	*result;
 	int		i;

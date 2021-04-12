@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 13:23:38 by pohl              #+#    #+#             */
-/*   Updated: 2021/04/03 15:41:46 by pohl             ###   ########.fr       */
+/*   Updated: 2021/04/12 11:43:28 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static char	**free_tab(char **result)
 		result[i] = NULL;
 		i++;
 	}
-	free (result);
+	free(result);
 	return (NULL);
 }
 
@@ -84,7 +84,7 @@ static int	count_words(const char *str, char separator)
 	return (nb_words);
 }
 
-char	**ft_split(const char *str, char separator)
+char		**ft_split(const char *str, char separator)
 {
 	char	**result;
 

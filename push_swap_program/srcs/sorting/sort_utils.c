@@ -6,13 +6,13 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 08:30:54 by pohl              #+#    #+#             */
-/*   Updated: 2021/04/03 12:14:37 by pohl             ###   ########.fr       */
+/*   Updated: 2021/04/12 11:56:57 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	skip_smallest(t_stack *a, t_stack *b, int smallest)
+int		skip_smallest(t_stack *a, t_stack *b, int smallest)
 {
 	while (a->top->number == smallest)
 	{

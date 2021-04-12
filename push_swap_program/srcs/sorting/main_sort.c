@@ -6,7 +6,7 @@
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 18:01:35 by paulohl           #+#    #+#             */
-/*   Updated: 2021/04/03 12:57:04 by pohl             ###   ########.fr       */
+/*   Updated: 2021/04/12 11:56:24 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	split_stack_a(t_stack *a, t_stack *b, int smallest)
 	return (i);
 }
 
-int	sort_remains(t_stack *a, t_stack *b, int smallest)
+int			sort_remains(t_stack *a, t_stack *b, int smallest)
 {
 	while (b->len)
 	{
@@ -53,7 +53,7 @@ int	sort_remains(t_stack *a, t_stack *b, int smallest)
 	return (smallest);
 }
 
-int	push_largest_half(t_stack *a, t_stack *b, int smallest)
+int			push_largest_half(t_stack *a, t_stack *b, int smallest)
 {
 	int		i;
 	int		pivot;
@@ -75,7 +75,7 @@ int	push_largest_half(t_stack *a, t_stack *b, int smallest)
 	return (i);
 }
 
-int	order_stack_b(t_stack *a, t_stack *b, int smallest)
+int			order_stack_b(t_stack *a, t_stack *b, int smallest)
 {
 	int	i;
 
@@ -90,7 +90,7 @@ int	order_stack_b(t_stack *a, t_stack *b, int smallest)
 	return (smallest);
 }
 
-void	sort_stacks(t_stack *a, t_stack *b)
+void		sort_stacks(t_stack *a, t_stack *b)
 {
 	int		i;
 	int		smallest;

@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 11:23:38 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/23 20:05:41 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/12 11:53:49 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static t_list	*pop_node(t_stack *stack)
 	return (popped);
 }
 
-static void	push(t_stack *to, t_stack *from)
+static void		push(t_stack *to, t_stack *from)
 {
 	t_list	*svg;
 
@@ -52,14 +52,14 @@ static void	push(t_stack *to, t_stack *from)
 	to->len++;
 }
 
-bool	pa(t_stack *a, t_stack *b)
+bool			pa(t_stack *a, t_stack *b)
 {
 	push(a, b);
 	write(1, "pa\n", 3);
 	return (true);
 }
 
-bool	pb(t_stack *a, t_stack *b)
+bool			pb(t_stack *a, t_stack *b)
 {
 	push(b, a);
 	write(1, "pb\n", 3);

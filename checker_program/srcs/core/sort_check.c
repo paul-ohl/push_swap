@@ -6,14 +6,12 @@
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:29:19 by paulohl           #+#    #+#             */
-/*   Updated: 2021/03/18 16:11:27 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/12 11:31:55 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 #include "libft.h"
-
-#include <stdio.h>
 
 bool	is_stack_sorted(t_stack *a, t_stack *b)
 {

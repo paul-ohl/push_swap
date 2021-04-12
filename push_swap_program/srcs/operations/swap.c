@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 11:14:18 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/23 18:25:04 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/12 11:54:53 by paulohl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	swap(t_stack *stack)
 	stack->top->number = tmp;
 }
 
-bool	sa(t_stack *a, t_stack *b)
+bool		sa(t_stack *a, t_stack *b)
 {
 	swap(a);
 	b->len = b->len;
@@ -32,7 +32,7 @@ bool	sa(t_stack *a, t_stack *b)
 	return (true);
 }
 
-bool	sb(t_stack *a, t_stack *b)
+bool		sb(t_stack *a, t_stack *b)
 {
 	swap(b);
 	a->len = a->len;
@@ -40,7 +40,7 @@ bool	sb(t_stack *a, t_stack *b)
 	return (true);
 }
 
-bool	ss(t_stack *a, t_stack *b)
+bool		ss(t_stack *a, t_stack *b)
 {
 	swap(a);
 	swap(b);
