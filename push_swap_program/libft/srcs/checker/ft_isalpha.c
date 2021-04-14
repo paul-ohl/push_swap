@@ -6,13 +6,13 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:08:11 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/16 16:47:10 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:12:35 by ft               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdbool.h>
 
-bool	ft_isalpha(const char c)
+bool	ft_isalpha(const int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 	{

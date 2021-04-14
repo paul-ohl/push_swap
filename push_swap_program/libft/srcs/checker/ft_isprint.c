@@ -6,13 +6,13 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 12:25:14 by pohl              #+#    #+#             */
-/*   Updated: 2021/03/16 16:48:01 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:12:45 by ft               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdbool.h>
 
-bool	ft_isprint(const char c)
+bool	ft_isprint(const int c)
 {
 	if (c >= 32 && c <= 126)
 	{

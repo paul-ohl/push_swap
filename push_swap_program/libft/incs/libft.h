@@ -6,7 +6,7 @@
 /*   By: paulohl <paulohl@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 15:39:50 by pohl              #+#    #+#             */
-/*   Updated: 2021/04/12 11:35:38 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:15:39 by ft               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@
 # include <strings.h>
 # include <stdbool.h>
 
-bool	ft_isalnum(const char c);
-bool	ft_isalpha(const char c);
-bool	ft_isascii(const char c);
-bool	ft_isdigit(const char c);
-bool	ft_isprint(const char c);
-bool	ft_iswhitespace(const char c);
+bool	ft_isalnum(const int c);
+bool	ft_isalpha(const int c);
+bool	ft_isascii(const int c);
+bool	ft_isdigit(const int c);
+bool	ft_isprint(const int c);
+bool	ft_iswhitespace(const int c);
 bool	ft_isnumber(const char *str);
 
 int		ft_atoi(const char *str);
@@ -36,7 +36,6 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-int		get_next_line(int fd, char **line);
 
 int		ft_pow(int base, int power);
 

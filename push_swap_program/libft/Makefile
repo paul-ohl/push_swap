@@ -9,7 +9,7 @@ SRCS		= checker/ft_isalnum.c checker/ft_isalpha.c checker/ft_isascii.c \
 			  checker/ft_iswhitespace.c \
 			  conv/ft_atoi.c conv/ft_itoa.c \
 			  io/ft_getopt.c io/ft_putchar_fd.c io/ft_putendl_fd.c \
-			  io/ft_putnbr_fd.c io/ft_putstr_fd.c io/get_next_line.c \
+			  io/ft_putnbr_fd.c io/ft_putstr_fd.c \
 			  linked_list/one_way_list/ft_lstadd_back.c \
 			  linked_list/one_way_list/ft_lstadd_front.c \
 			  linked_list/one_way_list/ft_lstclear.c \

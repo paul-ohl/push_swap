@@ -6,10 +6,11 @@
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 12:14:54 by paulohl           #+#    #+#             */
-/*   Updated: 2021/03/31 12:15:36 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:11:25 by ft               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strncpy(char *dst, const char *src, int len)

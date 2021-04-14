@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 13:23:38 by pohl              #+#    #+#             */
-/*   Updated: 2021/04/12 11:43:28 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:16:59 by ft               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static bool	fill_result(char **result, const char *str, char separator)
 			*result = ft_calloc(sizeof(**result), word_end - i + 1);
 			if (!*result)
 				return (false);
-			memcpy(*result, str + i, word_end - i);
+			ft_memcpy(*result, str + i, word_end - i);
 			result++;
 			i = word_end - 1;
 		}
