@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 13:08:45 by pohl              #+#    #+#             */
-/*   Updated: 2021/04/17 17:17:16 by ft               ###   ########.fr       */
+/*   Updated: 2021/04/17 17:25:39 by ft               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static bool	clear_list(t_stack *stack)
 	return (false);
 }
 
-static bool check_numbers(int argc, char **argv)
+static bool	check_numbers(int argc, char **argv)
 {
 	while (--argc)
 	{
