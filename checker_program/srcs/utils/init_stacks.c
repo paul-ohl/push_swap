@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 13:08:45 by pohl              #+#    #+#             */
-/*   Updated: 2021/04/12 11:33:25 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/17 17:17:16 by ft               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,16 @@ static bool	clear_list(t_stack *stack)
 	return (false);
 }
 
+static bool check_numbers(int argc, char **argv)
+{
+	while (--argc)
+	{
+		if (!ft_isnumber(argv[argc]))
+			return (false);
+	}
+	return (true);
+}
+
 static bool	check_doubles(t_list *list, size_t len)
 {
 	t_list	*checker;
@@ -37,11 +47,11 @@ static bool	check_doubles(t_list *list, size_t len)
 	size_t	j;
 
 	i = 0;
-	while (i++ < len)
+	while (i++ <= len)
 	{
 		j = i + 1;
 		checker = list->next;
-		while (j++ < len)
+		while (j++ <= len)
 		{
 			if (checker->number == list->number)
 				return (false);
@@ -54,6 +64,8 @@ static bool	check_doubles(t_list *list, size_t len)
 
 bool		init_stacks(t_stack *a, t_stack *b, int argc, char **argv)
 {
+	if (!check_numbers(argc, argv))
+		return (false);
 	a->len = 0;
 	a->top = new_node(ft_atoi(argv[--argc]));
 	if (!a->top)
@@ -65,8 +77,6 @@ bool		init_stacks(t_stack *a, t_stack *b, int argc, char **argv)
 	while (--argc)
 	{
 		a->len++;
-		if (!ft_isnumber(argv[argc]))
-			return (clear_list(a));
 		insert_before(a->top, new_node(ft_atoi(argv[argc])));
 		if (a->top->prev && is_int(a->top->prev->number, argv[argc]))
 			a->top = a->top->prev;
