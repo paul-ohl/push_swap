@@ -6,7 +6,7 @@
 /*   By: paulohl <pohl@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 18:01:35 by paulohl           #+#    #+#             */
-/*   Updated: 2021/04/12 11:56:24 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/18 22:22:46 by ft               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,8 @@ void		sort_stacks(t_stack *a, t_stack *b)
 	int		i;
 	int		smallest;
 
+	if (is_already_sorted(a->top, a->len))
+		return ;
 	if (a->len <= 20)
 	{
 		sort_small_stack(a, b);

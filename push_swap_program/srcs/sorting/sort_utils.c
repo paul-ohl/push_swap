@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 08:30:54 by pohl              #+#    #+#             */
-/*   Updated: 2021/04/12 11:56:57 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/18 22:20:55 by ft               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,20 @@ int		skip_smallest(t_stack *a, t_stack *b, int smallest)
 		smallest++;
 	}
 	return (smallest);
+}
+
+bool	is_already_sorted(t_list *list, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	while (++i < len)
+	{
+		if (list->number > list->next->number)
+			return (false);
+		list = list->next;
+	}
+	return (true);
 }
 
 bool	is_closer_down(t_stack *stack, int smallest)

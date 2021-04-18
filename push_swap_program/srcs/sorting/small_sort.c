@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 08:31:28 by pohl              #+#    #+#             */
-/*   Updated: 2021/04/18 22:00:01 by ft               ###   ########.fr       */
+/*   Updated: 2021/04/18 22:22:12 by ft               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,26 +65,14 @@ static void	sort_by_removal(t_stack *a, t_stack *b)
 	pa(a, b);
 }
 
-static bool	is_already_sorted(t_stack *stack)
-{
-	size_t	i;
-
-	i = 0;
-	while (++i < stack->len)
-	{
-		if (stack->top->number > stack->top->next->number)
-			return (false);
-		stack->top = stack->top->next;
-	}
-	return (true);
-}
-
 void		sort_small_stack(t_stack *a, t_stack *b)
 {
 	int		order;
 
 	order = generate_order(a->top, a->len);
-	if (is_already_sorted(a))
+	if (is_already_sorted(a->top, a->len))
+		return ;
+	if (order == 0x01 || order == 0x012 || order == 0x0123 || order == 0x01234)
 		return ;
 	else if (order == 0x10 || order == 0x102 || order == 0x1023)
 		sa(a, b);

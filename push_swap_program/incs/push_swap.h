@@ -6,7 +6,7 @@
 /*   By: pohl <pohl@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 13:32:32 by pohl              #+#    #+#             */
-/*   Updated: 2021/04/12 11:58:47 by paulohl          ###   ########.fr       */
+/*   Updated: 2021/04/18 22:21:51 by ft               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ bool			rrb(t_stack *a, t_stack *b);
 bool			rrr(t_stack *a, t_stack *b);
 
 int				print_err(void);
+bool			is_already_sorted(t_list *list, size_t len);
 
 #endif
