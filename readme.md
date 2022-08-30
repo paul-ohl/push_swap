@@ -2,4 +2,5 @@
 
 You've got to sort that stack.
 
-[Subject](./utils/en.subject.pdf)
+This project taught me optimisation and a few sorting algorithms, notably
+quick-sort.
